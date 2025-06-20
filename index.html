@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Fábrica de Avatares v2.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Fábrica de Avatares Divertidos</h1>
+    <p>Misture as opções e crie seu próprio boneco colecionável!</p>
+
+    <div class="options-grid">
+      <label for="emocao">Emoção:
+        <select id="emocao">
+          <option value="happy">😀 Feliz</option>
+          <option value="laughing">😂 Rindo</option>
+          <option value="in love">😍 Apaixonado</option>
+          <option value="cool">😎 Legal</option>
+          <option value="sad">😢 Triste</option>
+          <option value="angry">😠 Bravo</option>
+          <option value="surprised">😮 Surpreso</option>
+          <option value="sleepy">😴 Com sono</option>
+        </select>
+      </label>
+
+      <label for="personagem">Personagem:
+        <select id="personagem">
+          <option value="astronaut">👨‍🚀 Astronauta</option>
+          <option value="ninja">🥷 Ninja</option>
+          <option value="pirate">🏴‍☠️ Pirata</option>
+          <option value="robot">🤖 Robô</option>
+          <option value="wizard">🧙 Mago</option>
+          <option value="superhero">🦸 Super-herói</option>
+          <option value="fairy">🧚 Fada</option>
+          <option value="vampire">🧛 Vampiro</option>
+          <option value="chef">👨‍🍳 Chefe de Cozinha</option>
+          <option value="detective">🕵️ Detetive</option>
+        </select>
+      </label>
+
+      <label for="objeto">Ação / Objeto:
+        <select id="objeto">
+          <option value="holding a red balloon">🎈 Segurando um balão</option>
+          <option value="reading a magic book">📖 Lendo um livro mágico</option>
+          <option value="wielding a glowing sword">🗡️ Com uma espada brilhante</option>
+          <option value="typing on a laptop">💻 Usando um notebook</option>
+          <option value="riding a skateboard">🛹 Andando de skate</option>
+          <option value="playing an electric guitar">🎸 Tocando guitarra</option>
+          <option value="eating a giant slice of pizza">🍕 Comendo pizza</option>
+          <option value="holding a glowing star">✨ Segurando uma estrela</option>
+          <option value="juggling colorful balls">🤹 fazendo malabarismo</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="button-group">
+        <button id="generateBtn">✨ Criar meu Funko! ✨</button>
+        <button id="randomBtn">🎲 Gerar Aleatório</button>
+    </div>
+
+    <div id="output">
+      <p>Seu personagem aparecerá aqui!</p>
+    </div>
+
+    <div class="download-wrapper">
+        <button id="downloadBtn" style="display: none;">💾 Baixar Imagem</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
