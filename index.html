@@ -2,69 +2,72 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Fábrica de Avatares v2.0</title>
+  <title>Laboratório de Emojis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>Fábrica de Avatares Divertidos</h1>
-    <p>Misture as opções e crie seu próprio boneco colecionável!</p>
+    <h1>Laboratório de Emojis 🧪</h1>
+    <p>Combine conceitos, expressões e estilos para inventar o próximo emoji viral!</p>
 
     <div class="options-grid">
-      <label for="emocao">Emoção:
-        <select id="emocao">
-          <option value="happy">😀 Feliz</option>
-          <option value="laughing">😂 Rindo</option>
-          <option value="in love">😍 Apaixonado</option>
-          <option value="cool">😎 Legal</option>
-          <option value="sad">😢 Triste</option>
-          <option value="angry">😠 Bravo</option>
-          <option value="surprised">😮 Surpreso</option>
-          <option value="sleepy">😴 Com sono</option>
+      <label for="conceito">Conceito Base:
+        <select id="conceito">
+          <option value="heart">❤️ Coração</option>
+          <option value="brain">🧠 Cérebro</option>
+          <option value="star">⭐ Estrela</option>
+          <option value="planet">🪐 Planeta</option>
+          <option value="cat face">🐱 Gato</option>
+          <option value="dog face">🐶 Cachorro</option>
+          <option value="fox face">🦊 Raposa</option>
+          <option value="skull">💀 Caveira</option>
+          <option value="ghost">👻 Fantasma</option>
+          <option value="alien">👽 Alien</option>
+          <option value="fire">🔥 Fogo</option>
+          <option value="avocado">🥑 Abacate</option>
         </select>
       </label>
 
-      <label for="personagem">Personagem:
-        <select id="personagem">
-          <option value="astronaut">👨‍🚀 Astronauta</option>
-          <option value="ninja">🥷 Ninja</option>
-          <option value="pirate">🏴‍☠️ Pirata</option>
-          <option value="robot">🤖 Robô</option>
-          <option value="wizard">🧙 Mago</option>
-          <option value="superhero">🦸 Super-herói</option>
-          <option value="fairy">🧚 Fada</option>
-          <option value="vampire">🧛 Vampiro</option>
-          <option value="chef">👨‍🍳 Chefe de Cozinha</option>
-          <option value="detective">🕵️ Detetive</option>
+      <label for="expressao">Expressão / Estado:
+        <select id="expressao">
+          <option value="melting">🫠 Derretendo</option>
+          <option value="on fire">🔥 Em chamas</option>
+          <option value="frozen">🧊 Congelado</option>
+          <option value="exploding head">🤯 Explodindo</option>
+          <option value="crying">😭 Chorando</option>
+          <option value="laughing">😂 Rindo muito</option>
+          <option value="sleeping">😴 Dormindo</option>
+          <option value="hypnotized">😵‍💫 Hipnotizado</option>
+          <option value="glowing">✨ Brilhando</option>
+          <option value="zombie">🧟 Zumbi</option>
         </select>
       </label>
 
-      <label for="objeto">Ação / Objeto:
-        <select id="objeto">
-          <option value="holding a red balloon">🎈 Segurando um balão</option>
-          <option value="reading a magic book">📖 Lendo um livro mágico</option>
-          <option value="wielding a glowing sword">🗡️ Com uma espada brilhante</option>
-          <option value="typing on a laptop">💻 Usando um notebook</option>
-          <option value="riding a skateboard">🛹 Andando de skate</option>
-          <option value="playing an electric guitar">🎸 Tocando guitarra</option>
-          <option value="eating a giant slice of pizza">🍕 Comendo pizza</option>
-          <option value="holding a glowing star">✨ Segurando uma estrela</option>
-          <option value="juggling colorful balls">🤹 fazendo malabarismo</option>
+      <label for="estilo">Estilo Visual:
+        <select id="estilo">
+          <option value="3D render">📱 3D (Padrão)</option>
+          <option value="pixel art">👾 Pixel Art</option>
+          <option value="claymation">🏺 Argila (Claymation)</option>
+          <option value="neon light">💡 Neon</option>
+          <option value="made of crystal">💎 Cristal</option>
+          <option value="made of gold">🏆 Ouro</option>
+          <option value="vintage cartoon">🎞️ Cartoon Antigo</option>
+          <option value="sketch">✏️ Esboço</option>
         </select>
       </label>
     </div>
 
     <div class="button-group">
-        <button id="generateBtn">✨ Criar meu Funko! ✨</button>
+        <button id="generateBtn">🧪 Criar Emoji!</button>
         <button id="randomBtn">🎲 Gerar Aleatório</button>
     </div>
 
     <div id="output">
-      <p>Seu personagem aparecerá aqui!</p>
+      <p>Seu emoji aparecerá aqui!</p>
     </div>
-
+    
     <div class="download-wrapper">
         <button id="downloadBtn" style="display: none;">💾 Baixar Imagem</button>
     </div>
