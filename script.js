@@ -5,25 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const outputDiv = document.getElementById("output");
     const selects = document.querySelectorAll("select");
 
-    // Função para gerar imagem (agora mais completa)
+    // Função para gerar imagem (com prompt de EMOJI)
     function gerarImagem() {
         generateBtn.disabled = true;
         randomBtn.disabled = true;
         downloadBtn.style.display = 'none';
         outputDiv.innerHTML = '<div class="loader"></div>';
 
-        const emocao = document.getElementById("emocao").value;
-        const personagem = document.getElementById("personagem").value;
-        const objeto = document.getElementById("objeto").value;
+        // Pegando os valores das novas categorias
+        const conceito = document.getElementById("conceito").value;
+        const expressao = document.getElementById("expressao").value;
+        const estilo = document.getElementById("estilo").value;
 
-        const prompt = `Funko Pop style vinyl figure of a ${emocao} ${personagem}, ${objeto}, full body, chibi style, isolated on a plain white background, high detail, studio lighting, 3D render`;
-        const description = `Avatar estilo Funko Pop de um ${personagem} ${emocao} ${objeto}`;
+        // O NOVO PROMPT: focado em criar um emoji de alta qualidade
+        const prompt = `A single iOS emoji of a ${conceito} that is ${expressao}, ${estilo}, high detail, vibrant colors, simple clean vector art, isolated on a plain white background`;
+        
+        const description = `Emoji de um ${conceito} ${expressao} no estilo ${estilo}`;
 
         const img = document.createElement("img");
-
-        // Atributo essencial para permitir o download da imagem de outra origem
+        
         img.crossOrigin = "anonymous";
-
         img.src = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`;
         img.alt = description;
 
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             outputDiv.appendChild(img);
             generateBtn.disabled = false;
             randomBtn.disabled = false;
-            downloadBtn.style.display = 'inline-block'; // Mostra o botão de download
+            downloadBtn.style.display = 'inline-block';
         };
 
         img.onerror = function() {
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gerarImagem();
     }
 
-    // Função para baixar a imagem usando um canvas
+    // Função para baixar a imagem (continua a mesma)
     function baixarImagem() {
         const imgElement = outputDiv.querySelector('img');
         if (!imgElement) {
@@ -61,15 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
-
-        // Define o tamanho do canvas igual ao da imagem carregada
+        
         canvas.width = imgElement.naturalWidth;
         canvas.height = imgElement.naturalHeight;
 
-        // Desenha a imagem no canvas
         ctx.drawImage(imgElement, 0, 0);
 
-        // Cria um link temporário para o download
         const link = document.createElement('a');
         link.download = `${imgElement.alt.replace(/ /g, '_')}.png`;
         link.href = canvas.toDataURL('image/png');
